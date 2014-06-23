@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>ComS 342</h1>
+
+    <p>
+        Hey there, {{ name }}.
+    </p>
+
+    <p>
+        Now all we need is your NetID to verify you are enrolled in the class.
+    </p>
+
+    <p>
+        The NetID is the part before <em>@iastate.edu</em> incase you forgot.
+    </p>
+
+    <form method="post">
+        <div>
+            <label for="netID">NetID</label>
+            <input class="text" name="netID" id="netID" />
+        {% if error %}
+            <strong>That is an invalid NetID. Why don't you try again?</strong>
+        {% endif %}
+        </div>
+
+        <div>
+            <input type="submit" class="button" value="Join the Class" />
+        </div>
+    </form>
+
+    <div>
+    </div>
+{% endblock %}

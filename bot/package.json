@@ -1,0 +1,20 @@
+{
+    "name": "course-bot",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "node app"
+    },
+
+    "devDependencies": {
+    },
+
+    "dependencies": {
+        "express": "~3.4",
+        "swig": "~1.2",
+        "github": "~0.1",
+        "sqlite3": "~2.1",
+        "request": "~2.31",
+        "csv": "~0.3",
+        "nodemailer": "~0.6"
+    }
+}

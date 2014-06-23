@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if error == 'invalid netid' %}
+        <h1>Error</h1>
+
+        <p>
+            That is an invalid NetID. Why don't you <a href="/add">try again</a>?
+        </p>
+
+        <p>
+            If you are having issues, contact <a href="mailto:joshuad@iastate.edu?subject={{ error }}">Josh Davis</a>, one of the TAs.
+        </p>
+    {% elif error == 'not on roster' %}
+        <h1>Error</h1>
+
+        <p>
+            It doesn't appear that your NetID was on the class list at this time.
+        </p>
+
+        <p>
+            This may be the case if you've recently added the course. Contact <a
+                href="mailto:joshuad@iastate.edu?subject={{ error }}">Josh Davis</a>, one of the TAs,
+            to get added manually.
+        </p>
+    {% elif error == 'failed adding to Students' %}
+        <h1>Error</h1>
+
+        <p>
+            There was a problem adding your GitHub account to the Students team.
+        </p>
+
+        <p>
+            Contact <a href="mailto:joshuad@iastate.edu?subject={{ error }}">Josh Davis</a>, one of
+            the TAs, to fix things for you.
+        </p>
+    {% elif error == 'failed adding to team' %}
+        <h1>Error</h1>
+
+        <p>
+            There was a problem adding your GitHub account to a team.
+        </p>
+
+        <p>
+            Contact <a href="mailto:joshuad@iastate.edu?subject={{ error }}">Josh Davis</a>, one of
+            the TAs, to fix things for you.
+        </p>
+    {% elif error == 'failed creating a team' %}
+        <h1>Error</h1>
+
+        <p>
+            There was a problem creating a Team for you on GitHub.
+        </p>
+
+        <p>
+            Contact <a href="mailto:joshuad@iastate.edu?subject={{ error }}">Josh Davis</a>, one of
+            the TAs, to fix things for you.
+        </p>
+    {% elif error == 'invalid token' %}
+        <h1>Error</h1>
+
+        <p>
+            There was an unknown problem with GitHub.
+        </p>
+
+        <p>
+            Contact <a href="mailto:joshuad@iastate.edu?subject={{ error }}">Josh Davis</a>, one of
+            the TAs, to fix things for you.
+        </p>
+    {% elif error == 'already member' %}
+        <h1>Good News!</h1>
+
+        <p>
+            It looks like you are already a member. Your repository is here:
+            <a href="https://github.com/ComS342-ISU/{{ repo }}">{{ repo }}</a>.
+        </p>
+
+        <p>
+            The next thing you will want to do is visit the
+            <a href="https://github.com/ComS342-ISU/course-info/blob/master/guides/course-setup.md">Course Setup Guide</a>
+            and follow the instructions to setup Git.
+        </p>
+
+        <p>
+            If this is a mistake, contact
+            <a href="mailto:joshuad@iastate.edu?subject={{ error }}">Josh Davis</a>, one of
+            the TAs, to fix things for you.
+        </p>
+    {% elif error == 'failed checking membership' %}
+        <p>
+            There was a problem checking to see if you belong to the Organization.
+        </p>
+
+        <p>
+            Contact <a href="mailto:joshuad@iastate.edu?subject={{ error }}">Josh Davis</a>, one of
+            the TAs, to fix things for you.
+        </p>
+    {% else %}
+        <p>
+            Something appears to have gone wrong.
+        </p>
+
+        <p>
+            Contact <a href="mailto:joshuad@iastate.edu?subject=Strange error">Josh Davis</a>, one of
+            the TAs, to fix things for you.
+        </p>
+    {% endif %}
+
+{% endblock %}

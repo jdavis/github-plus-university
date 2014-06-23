@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Success!</h1>
+
+    <p>
+        Your squeaky clean repository has been created: <a href="https://github.com/ComS342-ISU/{{ repo }}">{{ repo }}</a>.
+    </p>
+
+    <p>
+        The next thing you will want to do is visit the
+        <a href="https://github.com/ComS342-ISU/course-info/blob/master/guides/course-setup.md">Course Setup Guide</a>
+        and follow the instructions to setup Git.
+    </p>
+
+    <p>
+        <a href="https://github.com/ComS342-ISU/">View the rest of the ComS 342 repositories.</a>
+    </p>
+
+{% endblock %}

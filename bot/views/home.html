@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>ComS 342</h1>
+
+    <p>
+        This will start the process of adding your GitHub account to the
+        <a href="https://github.com/ComS342-ISU">ComS 342 organization</a>.
+    </p>
+
+    <p>
+        You'll log in using GitHub's OAuth and then you will enter your
+        <strong>NetID</strong>. After doing that the system will automatically
+        add you to the class &amp; setup your repository for you.
+    </p>
+
+    <div>
+        <a href="https://github.com/login/oauth/authorize?client_id={{client_id}}&state={{state}}" class="button"><img src="/img/github.png"/>Sign in with GitHub</a>
+    </div>
+{% endblock %}
