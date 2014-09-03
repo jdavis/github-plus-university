@@ -44,7 +44,7 @@ your server won't crash if it has an unexpected error.
 ## License
 
 This code is distributed under the MIT license. For more info, read the
-[LICENSE](license) file distributed with the source code.
+[LICENSE][license] file distributed with the source code.
 
 [forever]: https://github.com/nodejitsu/forever
 [license]: /LICENSE
